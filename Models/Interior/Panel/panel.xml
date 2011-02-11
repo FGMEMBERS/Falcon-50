@@ -368,9 +368,9 @@
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/rwr/rwr.xml</path>
     <offsets>
-      <x-m> -0.210 </x-m>
-      <y-m> -0.260 </y-m>
-      <z-m>  0.150 </z-m>
+      <x-m> -0.212 </x-m>
+      <y-m> -0.230 </y-m>
+      <z-m>  0.170 </z-m>
     </offsets>
   </model>
 

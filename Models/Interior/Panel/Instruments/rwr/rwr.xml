@@ -15,6 +15,7 @@
     <object-name>mount</object-name>
     <object-name>screen</object-name>
     <object-name>bkg</object-name>
+    <object-name>button</object-name>
     <object-name>TK1type1</object-name>
     <object-name>TK2type1</object-name>
     <object-name>TK3type1</object-name>
@@ -83,6 +84,9 @@
     <object-name>MP11symb-ship</object-name>
     <object-name>MP12symb-ship</object-name>
     <object-name>MP13symb-ship</object-name>
+<!--
+    <object-name>vitre</object-name>
+-->
   </animation>
 
   <animation>
@@ -164,7 +168,19 @@
       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
+<!--
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
 
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+-->
   <animation>
     <type>pick</type>
     <visible>false</visible>
@@ -197,6 +213,89 @@
         <max>1</max>
       </binding>
     </action>
+  </animation>
+
+  <animation>
+    <name>symbology</name>
+    <object-name>TK1type1</object-name>
+    <object-name>TK2type1</object-name>
+    <object-name>TK3type1</object-name>
+    <object-name>TK4type1</object-name>
+    <object-name>MP1type1</object-name>
+    <object-name>MP2type1</object-name>
+    <object-name>MP3type1</object-name>
+    <object-name>MP4type1</object-name>
+    <object-name>MP5type1</object-name>
+    <object-name>MP6type1</object-name>
+    <object-name>MP7type1</object-name>
+    <object-name>MP8type1</object-name>
+    <object-name>MP9type1</object-name>
+    <object-name>MP10type1</object-name>
+    <object-name>MP11type1</object-name>
+    <object-name>MP12type1</object-name>
+    <object-name>MP13type1</object-name>
+    <object-name>TK1type2</object-name>
+    <object-name>TK2type2</object-name>
+    <object-name>TK3type2</object-name>
+    <object-name>TK4type2</object-name>
+    <object-name>MP1type2</object-name>
+    <object-name>MP2type2</object-name>
+    <object-name>MP3type2</object-name>
+    <object-name>MP4type2</object-name>
+    <object-name>MP5type2</object-name>
+    <object-name>MP6type2</object-name>
+    <object-name>MP7type2</object-name>
+    <object-name>MP8type2</object-name>
+    <object-name>MP9type2</object-name>
+    <object-name>MP10type2</object-name>
+    <object-name>MP11type2</object-name>
+    <object-name>MP12type2</object-name>
+    <object-name>MP13type2</object-name>
+    <object-name>TK1symb-aircraft</object-name>
+    <object-name>TK2symb-aircraft</object-name>
+    <object-name>TK3symb-aircraft</object-name>
+    <object-name>TK4symb-aircraft</object-name>
+    <object-name>MP1symb-aircraft</object-name>
+    <object-name>MP2symb-aircraft</object-name>
+    <object-name>MP3symb-aircraft</object-name>
+    <object-name>MP4symb-aircraft</object-name>
+    <object-name>MP5symb-aircraft</object-name>
+    <object-name>MP6symb-aircraft</object-name>
+    <object-name>MP7symb-aircraft</object-name>
+    <object-name>MP8symb-aircraft</object-name>
+    <object-name>MP9symb-aircraft</object-name>
+    <object-name>MP10symb-aircraft</object-name>
+    <object-name>MP11symb-aircraft</object-name>
+    <object-name>MP12symb-aircraft</object-name>
+    <object-name>MP13symb-aircraft</object-name>
+    <object-name>TK1symb-ship</object-name>
+    <object-name>TK2symb-ship</object-name>
+    <object-name>TK3symb-ship</object-name>
+    <object-name>TK4symb-ship</object-name>
+    <object-name>MP1symb-ship</object-name>
+    <object-name>MP2symb-ship</object-name>
+    <object-name>MP3symb-ship</object-name>
+    <object-name>MP4symb-ship</object-name>
+    <object-name>MP5symb-ship</object-name>
+    <object-name>MP6symb-ship</object-name>
+    <object-name>MP7symb-ship</object-name>
+    <object-name>MP8symb-ship</object-name>
+    <object-name>MP9symb-ship</object-name>
+    <object-name>MP10symb-ship</object-name>
+    <object-name>MP11symb-ship</object-name>
+    <object-name>MP12symb-ship</object-name>
+    <object-name>MP13symb-ship</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>symbology</object-name>
+    <emission>
+      <factor-prop alias="../../../symbology-lighting-intens"/>
+      <red>   0.6 </red>
+      <green> 1.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
   </animation>
 
   <animation>
@@ -382,7 +481,7 @@
     <object-name alias="../../MP1/group-name"/>
     <property alias="../../MP1/bearing-deg"/>
     <axis>
-      <x>-1</x>
+      <x> -1 </x>
     </axis>
   </animation>
 
@@ -391,73 +490,87 @@
     <object-name alias="../../MP1/group-name"/>
     <property>orientation/heading-deg</property>
     <axis>
-      <x>1</x>
+      <x> 1 </x>
     </axis>
   </animation>
 
-	<animation>
-		<type>translate</type>
-		<object-name alias="../../MP1/group-name"/>
-		<property alias="../../MP1/ecm-signal-norm"/>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../MP1/group-name"/>
-		<property>orientation/heading-deg</property>
-		<axis><x>-1</x></axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../MP1/group-name"/>
-		<property alias="../../MP1/bearing-deg"/>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation><!-- carrier symbol -->
-		<type>select</type>
-		<object-name alias="../../MP1/symb-ship-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../MP1/carrier"/>
-				<value>true</value>
-			</equals>
-		</condition>
-	</animation>	
-	<animation><!-- Aircraft symbol -->
-		<type>select</type>
-		<object-name alias="../../MP1/symb-aircraft-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../MP1/carrier"/>
-				<value>false</value>
-			</equals>
-		</condition>
-	</animation>
+  <animation>
+    <type>translate</type>
+    <object-name alias="../../MP1/group-name"/>
+    <property alias="../../MP1/ecm-signal-norm"/>
+    <factor>0.01</factor>
+    <axis>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../MP1/group-name"/>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> -1 </x>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../MP1/group-name"/>
+    <property alias="../../MP1/bearing-deg"/>
+    <axis>
+      <x> 1 </x>
+    </axis>
+  </animation>
+
+  <!-- carrier symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../MP1/symb-ship-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../MP1/carrier"/>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>	
+
+  <!-- Aircraft symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../MP1/symb-aircraft-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../MP1/carrier"/>
+        <value>false</value>
+      </equals>
+    </condition>
+  </animation>
 	
-	<animation><!--MP1 type number -->
-		<type>textranslate</type>
-		<object-name alias="../../MP1/type1-name"/>
-		<property alias="../../MP1/ecm_type_num"/>
-		<factor>0.01</factor>
-		<offset>-10</offset>
-		<step>10</step>
-		<scroll>0.5</scroll>
-		<axis><y>-1</y></axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name alias="../../MP1/type2-name"/>
-		<property alias="../../MP1/ecm_type_num"/>
-		<factor>0.1</factor>
-		<offset>-1</offset>
-		<step>1</step>
-		<axis><y>-1</y></axis>
-	</animation>
+  <!--MP1 type number -->
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../MP1/type1-name"/>
+    <property alias="../../MP1/ecm_type_num"/>
+    <factor>0.01</factor>
+    <offset>-10</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../MP1/type2-name"/>
+    <property alias="../../MP1/ecm_type_num"/>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <step>1</step>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
 
   <!--Group MP2 -->
   <MP2>
@@ -473,106 +586,126 @@
     <carrier>instrumentation/radar2/targets/multiplayer[1]/carrier</carrier>
   </MP2>
 
-	<animation>
-		<type>select</type>
-		<object-name alias="../../MP2/group-name"/>
-		<condition>
-			<greater-than>
-				<property alias="../../../../MP2/ecm-signal-norm"/>
-				<value>0</value>
-			</greater-than>
-		</condition>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name alias="../../MP2/group-name"/>
-		<property alias="../../MP2/bearing-deg"/>
-		<axis><x>-1</x></axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../MP2/group-name"/>
-		<property>orientation/heading-deg</property>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name alias="../../MP2/group-name"/>
-		<property alias="../../MP2/ecm-signal-norm"/>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../MP2/group-name"/>
-		<property>orientation/heading-deg</property>
-		<axis><x>-1</x></axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../MP2/group-name"/>
-		<property alias="../../MP2/bearing-deg"/>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation><!-- carrier symbol -->
-		<type>select</type>
-		<object-name alias="../../MP2/symb-ship-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../MP2/carrier"/>
-				<value>true</value>
-			</equals>
-		</condition>
-	</animation>	
-	<animation><!-- Aircraft symbol -->
-		<type>select</type>
-		<object-name alias="../../MP2/symb-aircraft-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../MP2/carrier"/>
-				<value>false</value>
-			</equals>
-		</condition>
-	</animation>	
-	<animation><!--MP2 type number -->
-		<type>textranslate</type>
-		<object-name alias="../../MP2/type1-name"/>
-		<property alias="../../MP2/ecm_type_num"/>
-		<factor>0.01</factor>
-		<offset>-10</offset>
-		<step>10</step>
-		<scroll>0.5</scroll>
-		<axis><y>-1</y></axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name alias="../../MP2/type2-name"/>
-		<property alias="../../MP2/ecm_type_num"/>
-		<factor>0.1</factor>
-		<offset>-1</offset>
-		<step>1</step>
-		<axis><y>-1</y></axis>
-	</animation>
+  <animation>
+    <type>select</type>
+    <object-name alias="../../MP2/group-name"/>
+    <condition>
+      <greater-than>
+        <property alias="../../../../MP2/ecm-signal-norm"/>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
 
+  <animation>
+    <type>rotate</type>
+    <object-name alias="../../MP2/group-name"/>
+    <property alias="../../MP2/bearing-deg"/>
+    <axis>
+      <x> -1 </x>
+    </axis>
+  </animation>
 
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../MP2/group-name"/>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> 1 </x>
+    </axis>
+  </animation>
 
+  <animation>
+    <type>translate</type>
+    <object-name alias="../../MP2/group-name"/>
+    <property alias="../../MP2/ecm-signal-norm"/>
+    <factor>0.01</factor>
+    <axis>
+      <z> 1 </z>
+    </axis>
+  </animation>
 
-	<MP3> <!--Group MP3 -->
-		<group-name>MP3</group-name>
-		<type1-name>MP3type1</type1-name>
-		<type2-name>MP3type2</type2-name>
-		<symb-ship-name>MP3symb-ship</symb-ship-name>
-		<symb-aircraft-name>MP3symb-aircraft</symb-aircraft-name>
-		<ecm-signal-norm>instrumentation/radar2/targets/multiplayer[2]/ecm-signal-norm</ecm-signal-norm>
-		<bearing-deg>instrumentation/radar2/targets/multiplayer[2]/bearing-deg</bearing-deg>
-		<true-heading-deg>instrumentation/radar2/targets/multiplayer[2]/orientation/true-heading-deg</true-heading-deg>
-		<ecm_type_num>instrumentation/radar2/targets/multiplayer[2]/ecm_type_num</ecm_type_num>
-		<carrier>instrumentation/radar2/targets/multiplayer[2]/carrier</carrier>
-	</MP3>
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../MP2/group-name"/>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> -1 </x>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../MP2/group-name"/>
+    <property alias="../../MP2/bearing-deg"/>
+    <axis>
+      <x> 1 </x>
+    </axis>
+  </animation>
+
+  <!-- carrier symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../MP2/symb-ship-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../MP2/carrier"/>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Aircraft symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../MP2/symb-aircraft-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../MP2/carrier"/>
+        <value>false</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!--MP2 type number -->
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../MP2/type1-name"/>
+    <property alias="../../MP2/ecm_type_num"/>
+    <factor>0.01</factor>
+    <offset>-10</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../MP2/type2-name"/>
+    <property alias="../../MP2/ecm_type_num"/>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <step>1</step>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
+
+  <!--Group MP3 -->
+  <MP3>
+    <group-name>MP3</group-name>
+    <type1-name>MP3type1</type1-name>
+    <type2-name>MP3type2</type2-name>
+    <symb-ship-name>MP3symb-ship</symb-ship-name>
+    <symb-aircraft-name>MP3symb-aircraft</symb-aircraft-name>
+    <ecm-signal-norm>instrumentation/radar2/targets/multiplayer[2]/ecm-signal-norm</ecm-signal-norm>
+    <bearing-deg>instrumentation/radar2/targets/multiplayer[2]/bearing-deg</bearing-deg>
+    <true-heading-deg>instrumentation/radar2/targets/multiplayer[2]/orientation/true-heading-deg</true-heading-deg>
+    <ecm_type_num>instrumentation/radar2/targets/multiplayer[2]/ecm_type_num</ecm_type_num>
+    <carrier>instrumentation/radar2/targets/multiplayer[2]/carrier</carrier>
+  </MP3>
 
 	<animation>
 		<type>select</type>
@@ -1971,103 +2104,126 @@
 		<axis><y>-1</y></axis>
 	</animation>
 
+  <!--Group TK4 -->
+  <TK4>
+    <group-name>TK4</group-name>
+    <type1-name>TK4type1</type1-name>
+    <type2-name>TK4type2</type2-name>
+    <symb-ship-name>TK4symb-ship</symb-ship-name>
+    <symb-aircraft-name>TK4symb-aircraft</symb-aircraft-name>
+    <ecm-signal-norm>instrumentation/radar2/targets/tanker[3]/ecm-signal-norm</ecm-signal-norm>
+    <bearing-deg>instrumentation/radar2/targets/tanker[3]/bearing-deg</bearing-deg>
+    <true-heading-deg>instrumentation/radar2/targets/tanker[3]/orientation/true-heading-deg</true-heading-deg>
+    <ecm_type_num>instrumentation/radar2/targets/tanker[3]/ecm_type_num</ecm_type_num>
+    <carrier>instrumentation/radar2/targets/tanker[3]/carrier</carrier>
+  </TK4>
 
-	<TK4> <!--Group TK4 -->
-		<group-name>TK4</group-name>
-		<type1-name>TK4type1</type1-name>
-		<type2-name>TK4type2</type2-name>
-		<symb-ship-name>TK4symb-ship</symb-ship-name>
-		<symb-aircraft-name>TK4symb-aircraft</symb-aircraft-name>
-		<ecm-signal-norm>instrumentation/radar2/targets/tanker[3]/ecm-signal-norm</ecm-signal-norm>
-		<bearing-deg>instrumentation/radar2/targets/tanker[3]/bearing-deg</bearing-deg>
-		<true-heading-deg>instrumentation/radar2/targets/tanker[3]/orientation/true-heading-deg</true-heading-deg>
-		<ecm_type_num>instrumentation/radar2/targets/tanker[3]/ecm_type_num</ecm_type_num>
-		<carrier>instrumentation/radar2/targets/tanker[3]/carrier</carrier>
-	</TK4>
+  <animation>
+    <type>select</type>
+    <object-name alias="../../TK4/group-name"/>
+    <condition>
+      <greater-than>
+        <property alias="../../../../TK4/ecm-signal-norm"/>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
 
-	<animation>
-		<type>select</type>
-		<object-name alias="../../TK4/group-name"/>
-		<condition>
-			<greater-than>
-				<property alias="../../../../TK4/ecm-signal-norm"/>
-				<value>0</value>
-			</greater-than>
-		</condition>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name alias="../../TK4/group-name"/>
-		<property alias="../../TK4/bearing-deg"/>
-		<axis><x>-1</x></axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../TK4/group-name"/>
-		<property>orientation/heading-deg</property>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name alias="../../TK4/group-name"/>
-		<property alias="../../TK4/ecm-signal-norm"/>
-		<factor>0.01</factor>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../TK4/group-name"/>
-		<property>orientation/heading-deg</property>
-		<axis><x>-1</x></axis>
-	</animation>
-	<animation> 
-		<type>rotate</type>
-		<object-name alias="../../TK4/group-name"/>
-		<property alias="../../TK4/bearing-deg"/>
-		<axis><x>1</x></axis>
-	</animation>
-	<animation><!-- carrier symbol -->
-		<type>select</type>
-		<object-name alias="../../TK4/symb-ship-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../TK4/carrier"/>
-				<value>true</value>
-			</equals>
-		</condition>
-	</animation>	
-	<animation><!-- Aircraft symbol -->
-		<type>select</type>
-		<object-name alias="../../TK4/symb-aircraft-name"/>
-		<condition>
-			<equals>
-				<property alias="../../../../TK4/carrier"/>
-				<value>false</value>
-			</equals>
-		</condition>
-	</animation>	
-	<animation><!--TK4 type number -->
-		<type>textranslate</type>
-		<object-name alias="../../TK4/type1-name"/>
-		<property alias="../../TK4/ecm_type_num"/>
-		<factor>0.01</factor>
-		<offset>-10</offset>
-		<step>10</step>
-		<scroll>0.5</scroll>
-		<axis><y>-1</y></axis>
-	</animation>
-	<animation>
-		<type>textranslate</type>
-		<object-name alias="../../TK4/type2-name"/>
-		<property alias="../../TK4/ecm_type_num"/>
-		<factor>0.1</factor>
-		<offset>-1</offset>
-		<step>1</step>
-		<axis><y>-1</y></axis>
-	</animation>
+  <animation>
+    <type>rotate</type>
+    <object-name alias="../../TK4/group-name"/>
+    <property alias="../../TK4/bearing-deg"/>
+    <axis>
+      <x> -1 </x>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../TK4/group-name"/>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> 1 </x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name alias="../../TK4/group-name"/>
+    <property alias="../../TK4/ecm-signal-norm"/>
+    <factor>0.01</factor>
+    <axis>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../TK4/group-name"/>
+    <property>orientation/heading-deg</property>
+    <axis>
+      <x> -1 </x>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name alias="../../TK4/group-name"/>
+    <property alias="../../TK4/bearing-deg"/>
+    <axis>
+      <x> 1 </x>
+    </axis>
+  </animation>
+
+  <!-- carrier symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../TK4/symb-ship-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../TK4/carrier"/>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Aircraft symbol -->
+  <animation>
+    <type>select</type>
+    <object-name alias="../../TK4/symb-aircraft-name"/>
+    <condition>
+      <equals>
+        <property alias="../../../../TK4/carrier"/>
+        <value>false</value>
+      </equals>
+    </condition>
+  </animation>	
+
+  <!--TK4 type number -->
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../TK4/type1-name"/>
+    <property alias="../../TK4/ecm_type_num"/>
+    <factor>0.01</factor>
+    <offset>-10</offset>
+    <step>10</step>
+    <scroll>0.5</scroll>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name alias="../../TK4/type2-name"/>
+    <property alias="../../TK4/ecm_type_num"/>
+    <factor>0.1</factor>
+    <offset>-1</offset>
+    <step>1</step>
+    <axis>
+      <y> -1 </y>
+    </axis>
+  </animation>
 
 </PropertyList>
+
