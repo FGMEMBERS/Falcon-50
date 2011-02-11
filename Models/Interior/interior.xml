@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+    <object-name>intporte</object-name>
+    <object-name>planchet</object-name>
+    <object-name>portesplacards</object-name>
+    <object-name>cloisons</object-name>
+    <object-name>trousgobelets</object-name>
+    <object-name>sieges</object-name>
+    <object-name>tableG1</object-name>
+    <object-name>tableG2</object-name>
+    <object-name>tableD1</object-name>
+    <object-name>tableD2</object-name>
+    <object-name>tableD3</object-name>
+    <object-name>soufles</object-name>
+    <object-name>ajout</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote  -->
+  <model>
+    <path>Aircraft/Falcon-50/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -6.674 </x-m>
+      <y-m> -0.528 </y-m>
+      <z-m> -1.307 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -7.087 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.396 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Overhead -->
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/overhead/overhead.xml</path>
+    <offsets>
+      <x-m> -6.945 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.520 </z-m>
+      <roll-deg>     0 </roll-deg>
+      <pitch-deg>   68 </pitch-deg>
+      <heading-deg>  0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Porte -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intporte</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor> 130 </factor>
+    <center>
+      <x-m> -5.209 </x-m>
+      <y-m> -0.741 </y-m>
+      <z-m> -2.075 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

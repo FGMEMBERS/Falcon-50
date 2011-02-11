@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Dassault Falcon 50 : BARANGER Emmanuel (2011)
+
+     sources         : http://en.wikipedia.org/wiki/Dassault_Falcon_50
+
+     Wingspan        : 18.86 m    (    61 ft 10 1/2 in  )
+     Lenght          : 18.52 m    (    60 ft  9 1/4 in  )
+     Height          :  6.97 m    (    22 ft 10 1/2 in  )
+     Empty mass      :  9150 kg   ( 20170 lb            )
+     Engines         : 3 Garrett TFE731-3-1C turbofan engines (3700 lbf each)
+     Cruise speed    : Mach 0.82  ( 888 km/h / 484.0 kt )
+     Maximim speed   : Mach 0.86  ( 915 km/h / 498.7 kt )
+-->
+
+<airplane mass="20170">
+
+  <approach speed="110" aoa="4" fuel="0.7">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.2"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
+    <control-setting axis="/controls/gear/gear-down" value="1"/>
+  </approach>
+
+  <cruise speed="484" alt="19500" fuel="1">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.8"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
+    <control-setting axis="/controls/gear/gear-down" value="0"/>
+  </cruise>
+
+  <cockpit x="7.063" y="0.385" z="-0.837"/>
+
+  <!-- Fuselage -->
+  <fuselage ax=" 9.252" ay=" 0.000" az="-1.828" bx="-8.324" by=" 0.000" bz="-0.946" width="1.755" taper="0.4" midpoint="0.15"/>
+
+  <!-- Left engine -->
+  <fuselage ax="-1.807" ay=" 1.537" az="-1.060" bx="-4.343" by=" 1.537" bz="-1.060" width="1.028" taper="0.7" midpoint="0.15"/>
+
+  <!-- Center engine -->
+  <fuselage ax="-1.538" ay=" 0.000" az=" 0.203" bx="-4.343" by=" 0.000" bz=" 0.203" width="1.028" taper="0.7" midpoint="0.15"/>
+
+  <!-- Right engine -->
+  <fuselage ax="-1.807" ay="-1.537" az="-1.060" bx="-4.343" by="-1.537" bz="-1.060" width="1.028" taper="0.7" midpoint="0.15"/>
+
+  <mstab x="-0.049" y="0.696" z="-2.111"
+         chord="4.218" 
+         length="3.04" 
+         taper="0.605"
+         sweep="20.4">
+  </mstab>
+
+  <wing x="-1.103" y="3.541" z="-2.111"
+        chord="2.549" 
+        length="6.35" 
+        taper="0.46"
+        sweep="21.8"
+        camber="0.035">
+        <stall aoa="14" width="3" peak="1.3"/>
+        <spoiler start="0.374" end="0.613" lift="1.3" drag="1.5"/>
+        <flap0 start="0.080" end="0.615" lift="1.3" drag="1.5"/>
+        <flap1 start="0.624" end="0.959" lift="1.1" drag="1.0"/>
+
+        <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" square="true" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/flaps-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="30"/>
+  </wing>
+
+  <hstab x="-6.559" y="0" z="0.534"
+         chord="2.430" 
+         length="4.2" 
+         taper="0.44"
+         sweep="30"
+         dihedral="0.0">
+         <stall aoa="14" width="3" peak="1.3"/>
+         <flap0 start="0" end="1" lift="1.6" drag="1.5"/>
+         <flap1 start="0" end="1" lift="1.6" drag="1.5"/>
+  
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-5.457" y="0" z="-0.445"
+         chord="3.551" 
+         length="4.7" 
+         taper="0.4"
+         sweep="32">
+         <stall aoa="10" width="5" peak="1.5"/>
+  
+         <flap0 start="0.1" end="0.9" lift="1.8" drag="1.3"/>
+  
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!-- Engines   source            : http://en.wikipedia.org/wiki/Honeywell_TFE731
+
+                 name              : Garrett TFE731
+                 type              : Turbofan
+                 power cruise      : 3500 lbf
+                 weight            : 734 lb ( 333 kg )
+  -->
+  <jet x="-3.075" y="1.537" z="-1.060"
+       mass="734"
+       thrust="3500"
+       tsfc="0.576">
+       <actionpt x="-4.343" y="1.537" z="-1.060"/>
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  </jet>
+
+  <jet x="-3.075" y="-1.537" z="-1.060"
+       mass="734"
+       thrust="3500"
+       tsfc="0.576">
+       <actionpt x="-4.343" y="-1.537" z="-1.060"/>
+       <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+  </jet>
+
+  <jet x="-2.941" y="0.000" z="0.203"
+       mass="734"
+       thrust="3500"
+       tsfc="0.576">
+       <actionpt x="-8.324" y="0.000" z="-0.946"/>
+       <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
+
+       <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm"/>		
+
+       <control-speed control="REVERSE_THRUST" transition-time="1.5"/>
+  </jet>
+
+  <!-- nose -->
+  <gear x="6.201" y="0" z="-3.475" 
+        retract-time="7" 
+        compression="0.2" 
+        spring="1.1" 
+        damp="1.4" >
+        <control-input axis="/controls/flight/rudder" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.9" dst1="0.9"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
+  <!-- left main -->
+  <gear x="-0.976" y="1.888" z="-3.469" 
+        retract-time="7" 
+        compression="0.2" 
+        spring="0.85" 
+        damp="2" >
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
+  <!-- right main -->
+  <gear x="-0.976" y="-1.888" z="-3.469" 
+        retract-time="7" 
+        compression="0.2" 
+        spring="0.85" 
+        damp="2" >
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+
+        <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+
+        <control-speed control="EXTEND" transition-time="7"/>
+  </gear>
+
+  <!-- Internal tanks 
+       2*280 liter wings
+  -->
+  <tank x="-0.160" y="-2.3" z="-2.130" jet="true" capacity="1250"/>
+  <tank x="-0.160" y=" 2.3" z="-2.130" jet="true" capacity="1250"/>
+
+  <!-- Mass distribution  -->
+  <ballast x="8" y="0" z="-3.0" mass="2500"/>
+
+</airplane>
+
