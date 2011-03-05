@@ -45,6 +45,7 @@
         <int type="int">0</int>  <!-- 7 color -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/surface-positions/slat-pos-norm"/>
       </generic>
     </multiplay>
 
