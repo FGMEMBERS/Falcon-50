@@ -81,7 +81,6 @@
     <object-name>trous</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
-    <object-name>heliceCA</object-name>
     <object-name>heliceCB</object-name>
 
     <!-- Objets transparents -->
@@ -139,7 +138,6 @@
     <object-name>trous</object-name>
     <object-name>heliceG</object-name>
     <object-name>heliceD</object-name>
-    <object-name>heliceCA</object-name>
     <object-name>heliceCB</object-name>
 
     <property-base>sim/model/livery</property-base>
@@ -231,6 +229,16 @@
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Falcon-50/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.251 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -3.276 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/interior.xml</path>
   </model>
 
   <!-- Flamme -->
@@ -367,16 +375,6 @@
     </offsets>
   </model>
 
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
   <!-- Rotation des hélices des réacteurs -->
   <animation>
     <type>spin</type>
@@ -404,23 +402,6 @@
       <x-m>  3.098 </x-m>
       <y-m>  1.539 </y-m>
       <z-m> -1.059 </z-m>
-    </center>
-    <axis>
-      <x> 1 </x>
-      <y> 0 </y>
-      <z> 0 </z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>heliceCA</object-name>
-    <property>controls/engines/engine[2]/throttle</property>
-    <factor> 100 </factor>
-    <center>
-      <x-m> 1.755 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.260 </z-m>
     </center>
     <axis>
       <x> 1 </x>

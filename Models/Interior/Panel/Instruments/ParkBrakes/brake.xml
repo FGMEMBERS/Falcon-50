@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>A-10-emer-brake.ac</path>
+
+  <animation>
+    <object-name>emer-brake</object-name>
+  </animation>
+
+  <animation>
+    <object-name>emer-brake</object-name>
+    <type>translate</type>
+    <property>controls/gear/brake-parking</property>
+    <factor>0.05</factor>
+    <center>
+      <x-m>  2.5177 </x-m>
+      <y-m> -0.5059 </y-m>
+      <z-m>  0.8366 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
