@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>winglets.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>winglets</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>winglets</object-name>
+    <condition>
+      <property>sim/multiplay/generic/int[6]</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>winglets</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>winglets</object-name>
+  </effect>
+
+</PropertyList>
+

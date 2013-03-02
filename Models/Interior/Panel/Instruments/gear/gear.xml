@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -24,17 +24,82 @@
     <type>material</type>
     <object-name>lampflap</object-name>
     <emission>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
-      <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
+      <factor-prop>/surface-positions/slats-pos-norm</factor-prop>
+      <red>   50 </red>
+      <green> 50 </green>
+      <blue>  50 </blue>
     </emission> 
   </animation>    
 
   <animation>
+    <type>material</type>
+    <object-name>gearA</object-name>
+    <emission>
+      <factor-prop>gear/gear[0]/position-norm</factor-prop>
+      <red>   10 </red>
+      <green> 10 </green>
+      <blue>  10 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>gearG</object-name>
+    <emission>
+      <factor-prop>gear/gear[1]/position-norm</factor-prop>
+      <red>   10 </red>
+      <green> 10 </green>
+      <blue>  10 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>gearD</object-name>
+    <emission>
+      <factor-prop>gear/gear[2]/position-norm</factor-prop>
+      <red>   10 </red>
+      <green> 10 </green>
+      <blue>  10 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>af</object-name>
+    <condition>
+      <equals>				
+        <property>controls/flight/speedbrake-lever</property>
+        <value>1.0</value>
+      </equals>
+    </condition>  
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>frein</object-name>
+    <condition>
+      <equals>				
+        <property>controls/flight/spoilers</property>
+        <value> 1 </value>
+      </equals>
+    </condition>  
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>posflap</object-name>
-    <property>surface-positions/flap-pos-norm</property>
+    <property>/surface-positions/flaps-pos-norm</property>
     <factor>78</factor>
     <center>
       <x-m> 0.002 </x-m>
@@ -47,38 +112,5 @@
       <z>  0 </z>
     </axis>
   </animation>  
-
-  <animation>
-    <type>material</type>
-    <object-name>gearA</object-name>
-    <emission>
-      <factor-prop>gear/gear[0]/position-norm</factor-prop>
-      <red>   4 </red>
-      <green> 4 </green>
-      <blue>  4 </blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>gearG</object-name>
-    <emission>
-      <factor-prop>gear/gear[1]/position-norm</factor-prop>
-      <red>   4 </red>
-      <green> 4 </green>
-      <blue>  4 </blue>
-    </emission>
-  </animation>
-
-  <animation>
-    <type>material</type>
-    <object-name>gearD</object-name>
-    <emission>
-      <factor-prop>gear/gear[2]/position-norm</factor-prop>
-      <red>   4 </red>
-      <green> 4 </green>
-      <blue>  4 </blue>
-    </emission>
-  </animation>
 
 </PropertyList>

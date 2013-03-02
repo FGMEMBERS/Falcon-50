@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <key n="100">
+    <name>d</name>
+    <desc>Crew door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.crewexport();</script>
+    </binding>
+  </key>
+
+  <key n="68">
+    <name>D</name>
+    <desc>Passenger door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.passengerexport();</script>
+    </binding>
+  </key>
+
+  <key n="127">
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[2]/reverser</property>
+    </binding>
+  </key>
+
+  <key n="267">
+    <name>F11</name>
+    <desc>Pop up autopilot dialog</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dialogs.ap_settings.toggle()</script>
+    </binding>
+  </key>
+
+  <key n="268">
+    <name>F12</name>
+    <desc>Radio Stack</desc>
+    <binding>
+      <command>nasal</command>
+      <script>dialogs.Radio.open()</script>
+    </binding>
+  </key>
+
+  <key n="1">
+    <name>Ctrl-A</name>
+    <desc>toggle autopilot altitude lock</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/alt-hold</property>
+    </binding>
+  </key>
+
+  <key n="7">
+    <name>Ctrl-G</name>
+    <desc>toggle autopilot glide slope lock</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/app-hold</property>
+    </binding>
+  </key>
+
+  <key n="8">
+    <name>Ctrl-H</name>
+    <desc>toggle autopilot heading lock</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/hdg-hold</property>
+    </binding>
+  </key>
+
+  <key n="9">
+    <name>Ctrl-I</name>
+    <desc>toggle auto spoilers</desc>
+    <binding>
+      <command>nasal</command>
+      <script>controls.toggleAutoSpoilers();</script>
+    </binding>
+  </key>
+
+  <key n="12">
+    <name>Ctrl-L</name>
+    <desc>toggle cabin lights</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/lighting/cabin-lights</property>
+    </binding>
+  </key>
+
+  <key n="14">
+    <name>Ctrl-N</name>
+    <desc>toggle LNAV lock</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/lnav-hold</property>
+    </binding>
+  </key>
+
+  <key n="15">
+    <name>Ctrl-o</name>
+    <desc>A/P ~ Passive</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>autopilot/locks/passive-mode</property>
+    </binding>
+  </key>
+
+  <key n="16">
+    <name>Ctrl-P</name>
+    <desc>toggle VS</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/vs-fpa-hold</property>
+    </binding>
+  </key>
+
+  <key n="19">
+    <name>Ctrl-S</name>
+    <desc>toggle autothrottle</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>instrumentation/afds/inputs/at-hold</property>
+    </binding>
+  </key>
+
+  <key n="20">
+    <name>Ctrl-t</name>
+    <desc>TO/GA switch</desc>
+    <binding>
+      <command>nasal</command>
+      <script>autosystem.afds.input(2,2);</script>
+    </binding>
+  </key>
+
+</PropertyList>
+

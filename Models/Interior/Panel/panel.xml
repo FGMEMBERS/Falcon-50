@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- Newer panel for Falcon 50 -->
+<!-- Newer panel for Falcon 50 by OO-ZVY August 2012 -->
 <PropertyList>
 
   <path>panel.ac</path>
@@ -14,14 +14,23 @@
 
   <!-- Switch Landing Light -->
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MCP/APpanel.xml</path>
     <offsets>
       <x-m> -0.206 </x-m>
-      <y-m> -0.440 </y-m>
-      <z-m>  0.380 </z-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.365 </z-m>
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/divers/autospoiler.xml</path>
+    <offsets>
+      <x-m> -0.206 </x-m>
+      <y-m>  0.420 </y-m>
+      <z-m>  0.380 </z-m>
+    </offsets>
+  </model>
+ 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
     <offsets>
@@ -31,155 +40,88 @@
     </offsets>
   </model>
 
-  <!-- AI -->
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EADI/eadi.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/divers/nav-lights.xml</path>
     <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.454 </y-m>
-      <z-m>  0.226 </z-m>
+      <x-m> -0.206 </x-m>
+      <y-m>  0.460 </y-m>
+      <z-m>  0.380 </z-m>
     </offsets>
   </model>
-
+ 
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EHSI/ehsi.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/stdby/stby-ai.xml</path>
     <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.454 </y-m>
-      <z-m>  0.080 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EADI/eadi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.454 </y-m>
-      <z-m>  0.226 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EHSI/ehsi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.454 </y-m>
-      <z-m>  0.080 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/adi/adi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.200 </y-m>
-      <z-m>  0.310 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/RDR-160/RDR-160.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.160 </y-m>
-      <z-m>  0.100 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/garmin/gps155.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.160 </y-m>
-      <z-m>  0.010 </z-m>
-    </offsets>
-  </model>
-  
-    <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/altset/altset.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.330 </y-m>
+      <x-m> -0.223 </x-m>
+      <y-m> -0.140 </y-m>
       <z-m>  0.250 </z-m>
     </offsets>
   </model>
-      <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/alt/alt.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.330 </y-m>
-      <z-m>  0.180 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/alt/alt.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.580 </y-m>
-      <z-m>  0.180 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.330 </y-m>
-      <z-m>  0.100 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.580 </y-m>
-      <z-m>  0.100 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/tcas/tcas.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.330 </y-m>
-      <z-m>  0.010 </z-m>
-    </offsets>
-  </model>
 
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/asi/asi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.580 </y-m>
-      <z-m>  0.160 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/stdby/stby-asi.xml</path>
     <offsets>
       <x-m> -0.223 </x-m>
-      <y-m> -0.580 </y-m>
-      <z-m>  0.160 </z-m>
-    </offsets>
-  </model>  
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/asi/asi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.330 </y-m>
+      <y-m> -0.140 </y-m>
       <z-m>  0.160 </z-m>
     </offsets>
   </model>
 
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/stdby/stby-alt.xml</path>
     <offsets>
       <x-m> -0.223 </x-m>
-      <y-m>  0.330 </y-m>
+      <y-m> -0.140 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>PFD2</name>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/PFD/PFD3d.xml</path>
+    <offsets>
+      <x-m> -0.221 </x-m>
+      <y-m> -0.590 </y-m>
+      <z-m>  0.160 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>PFD1</name>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/PFD/PFD3d.xml</path>
+    <offsets>
+      <x-m> -0.221 </x-m>
+      <y-m>  0.590 </y-m>
+      <z-m>  0.160 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>CTL1</name>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/EFIS/efis-ctl.xml</path>
+    <offsets>
+      <x-m> -0.206 </x-m>
+      <y-m> -0.340 </y-m>
+      <z-m>  0.360 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>ND2</name>
+      <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/ND.xml</path>
+      <offsets>
+      <x-m> -0.223 </x-m>
+      <y-m> -0.365 </y-m>
+      <z-m>  0.160 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <name>ND1</name>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/ND.xml</path>
+    <offsets>
+      <x-m> -0.223 </x-m>
+      <y-m>  0.365 </y-m>
       <z-m>  0.160 </z-m>
     </offsets>
   </model> 
@@ -187,9 +129,9 @@
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/aoa/aoa.xml</path>
     <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m> -0.660 </y-m>
-      <z-m>  0.160 </z-m>
+      <x-m> -0.223 </x-m>
+      <y-m> -0.500 </y-m>
+      <z-m>  0.320 </z-m>
     </offsets>
   </model>
 
@@ -197,17 +139,17 @@
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/chrono/chronometer.xml</path>
     <offsets>
       <x-m> -0.221 </x-m>
-      <y-m> -0.670 </y-m>
-      <z-m>  0.070 </z-m>
+      <y-m> -0.750 </y-m>
+      <z-m>  0.090 </z-m>
     </offsets>
   </model>     
-  
+ 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/chrono/chronometer.xml</path>
     <offsets>
       <x-m> -0.221 </x-m>
-      <y-m>  0.670 </y-m>
-      <z-m>  0.070 </z-m>
+      <y-m>  0.750 </y-m>
+      <z-m>  0.090 </z-m>
     </offsets>
   </model>         
 
@@ -215,26 +157,17 @@
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
     <offsets>
       <x-m> -0.221 </x-m>
-      <y-m> -0.580 </y-m>
-      <z-m>  0.070 </z-m>
+      <y-m> -0.140 </y-m>
+      <z-m> -0.030 </z-m>
     </offsets>
   </model>
-  
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
-    <offsets>
-      <x-m> -0.221 </x-m>
-      <y-m>  0.330 </y-m>
-      <z-m>  0.070 </z-m>
-    </offsets>
-  </model>
-  
+
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
     <offsets>
-      <x-m> -1.200 </x-m>
-      <y-m> -0.135 </y-m>
-      <z-m>  0.250 </z-m>
+      <x-m> -0.060 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.100 </z-m>
     </offsets>
   </model>
 
@@ -435,48 +368,48 @@
   </model>
   
   <model>
-    <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
-    <offsets>
-      <x-m> -0.09 </x-m>
-      <y-m>  0.10 </y-m>
-      <z-m> -0.14 </z-m>
-      <pitch-deg> -85 </pitch-deg>
-    </offsets>
-    <overlay>
-		  <texture>boeing_grey.png</texture>
-		</overlay>
-  </model>
-
-  <model>
-    <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/cdu/cdu.xml</path>
     <offsets>
       <x-m> -0.090 </x-m>
-      <y-m> -0.100 </y-m>
-      <z-m> -0.140 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <y-m>  0.100 </y-m>
+      <z-m> -0.147 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
     <overlay>
       <texture>boeing_grey.png</texture>
-		</overlay>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/cdu/cdu.xml</path>
+    <offsets>
+      <x-m> -0.090 </x-m>
+      <y-m> -0.100 </y-m>
+      <z-m> -0.147 </z-m>
+      <pitch-deg> -82 </pitch-deg>
+    </offsets>
+    <overlay>
+      <texture>grey.png</texture>
+    </overlay>
   </model>
   
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/VHF-22/ctl22-com1.xml</path>
     <offsets>
-      <x-m>  0.10 </x-m>
-      <y-m> -0.13 </y-m>
-      <z-m> -0.15 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <x-m>  0.100 </x-m>
+      <y-m> -0.128 </y-m>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/VHF-22/ctl22-com2.xml</path>
     <offsets>
-      <x-m>  0.10 </x-m>
-      <y-m> -0.06 </y-m>
-      <z-m> -0.15 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <x-m>  0.100 </x-m>
+      <y-m> -0.062 </y-m>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
   
@@ -485,8 +418,8 @@
     <offsets>
       <x-m>  0.100 </x-m>
       <y-m>  0.125 </y-m>
-      <z-m> -0.150 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
@@ -495,91 +428,89 @@
     <offsets>
       <x-m>  0.100 </x-m>
       <y-m>  0.065 </y-m>
-      <z-m> -0.150 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/TDR-94/ctl92-transponder.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.196 </x-m>
       <y-m>  0.125 </y-m>
-      <z-m> -0.155 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.185 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/ADF-462/ctl62-adf.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.196 </x-m>
       <y-m>  0.065 </y-m>
-      <z-m> -0.155 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.185 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/Empty/empty1.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.101 </x-m>
       <y-m>  0.095 </y-m>
-      <z-m> -0.160 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/Empty/empty1.xml</path>
     <offsets>
-      <x-m>  0.100 </x-m>
+      <x-m>  0.101 </x-m>
+      <y-m> -0.095 </y-m>
+      <z-m> -0.172 </z-m>
+      <pitch-deg> -82 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/Empty/empty1.xml</path>
+    <offsets>
+      <x-m>  0.196 </x-m>
       <y-m>  0.095 </y-m>
-      <z-m> -0.160 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.185 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/Empty/empty1.xml</path>
     <offsets>
-      <x-m>  0.170 </x-m>
+      <x-m>  0.196 </x-m>
       <y-m> -0.095 </y-m>
-      <z-m> -0.160 </z-m>
-      <pitch-deg> -85 </pitch-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/Empty/empty1.xml</path>
-    <offsets>
-      <x-m>  0.100 </x-m>
-      <y-m> -0.095 </y-m>
-      <z-m> -0.160 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.185 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/AudioPanel/audiopnl.xml</path>
     <offsets>
-      <x-m>  0.260 </x-m>
+      <x-m>  0.271 </x-m>
       <y-m> -0.095 </y-m>
-      <z-m> -0.170 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.197 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/AudioPanel/audiopnl.xml</path>
     <offsets>
-      <x-m>  0.260 </x-m>
+      <x-m>  0.271 </x-m>
       <y-m>  0.095 </y-m>
-      <z-m> -0.170 </z-m>
-      <pitch-deg> -85 </pitch-deg>
+      <z-m> -0.197 </z-m>
+      <pitch-deg> -82 </pitch-deg>
     </offsets>
   </model>
 
 </PropertyList>
-
-

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -4.12117 </x-m>
+      <y-m> -0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -4.12117 </x-m>
+      <y-m>  0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.90149 </x-m>
+      <y-m> -0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.90149 </x-m>
+      <y-m>  0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.78170 </x-m>
+      <y-m> -0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.78170 </x-m>
+      <y-m>  0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -1.18526 </x-m>
+      <y-m>  0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m>  0.03442 </x-m>
+      <y-m>  0.51172 </y-m>
+      <z-m> -1.37382 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/sofa.xml</path>
+    <offsets>
+      <x-m> -0.66494 </x-m>
+      <y-m> -0.56393 </y-m>
+      <z-m> -1.37382 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/table.xml</path>
+    <offsets>
+      <x-m> -3.51619 </x-m>
+      <y-m>  0.80145 </y-m>
+      <z-m> -1.38585 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/table.xml</path>
+    <offsets>
+      <x-m> -2.35619 </x-m>
+      <y-m>  0.80145 </y-m>
+      <z-m> -1.38585 </z-m>
+      <roll-deg> 90 </roll-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/table.xml</path>
+    <offsets>
+      <x-m> -0.58619 </x-m>
+      <y-m>  0.80145 </y-m>
+      <z-m> -1.38585 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/table.xml</path>
+    <offsets>
+      <x-m> -3.51619 </x-m>
+      <y-m> -0.80145 </y-m>
+      <z-m> -1.38585 </z-m>
+      <roll-deg>     90 </roll-deg>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/table.xml</path>
+    <offsets>
+      <x-m> -2.35619 </x-m>
+      <y-m> -0.80145 </y-m>
+      <z-m> -1.38585 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
+

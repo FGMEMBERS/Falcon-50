@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Dassault Falcon 50 : BARANGER Emmanuel (2011)
                         : Updated by Jano   (2011)
@@ -17,17 +17,17 @@
 <airplane mass="20170">
 
   <approach speed="110" aoa="4" fuel="0.7">
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.2"/>
     <control-setting axis="/controls/flight/flaps" value="1"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <cruise speed="484" alt="19500" fuel="1">
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="0.8"/>
     <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
@@ -126,7 +126,8 @@
        thrust="3500"
        tsfc="0.576">
        <actionpt x="-4.343" y="1.537" z="-1.060"/>
-       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
   </jet>
 
   <jet x="-3.075" y="-1.537" z="-1.060"
@@ -135,6 +136,7 @@
        tsfc="0.576">
        <actionpt x="-4.343" y="-1.537" z="-1.060"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
   </jet>
 
   <jet x="-2.941" y="0.000" z="0.203"
@@ -142,8 +144,8 @@
        thrust="3500"
        tsfc="0.576">
        <actionpt x="-8.324" y="0.000" z="-0.946"/>
-       <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
-       <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
+       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
 
        <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm"/>		
 
@@ -199,6 +201,7 @@
        2*280 liter wings
   -->
   <tank x="0.160" y=" 3.542" z="-2.130" jet="true" capacity="1250"/>
+  <tank x="0.160" y=" 0.000" z="-2.130" jet="true" capacity="1250"/>
   <tank x="0.160" y="-3.542" z="-2.130" jet="true" capacity="1250"/>
 
   <!-- Mass distribution  -->
@@ -206,4 +209,3 @@
   <ballast x="-5" y="0" z=" 0" mass="-1200"/>
 
 </airplane>
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -40,6 +40,11 @@
 
   <!-- Pilote  -->
   <model>
+    <path>Aircraft/Falcon-50/Models/Interior/Seats/all-seats.xml</path>
+  </model>
+
+  <!-- Pilote  -->
+  <model>
     <path>Aircraft/Falcon-50/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -6.674 </x-m>
@@ -65,9 +70,7 @@
       <x-m> -6.945 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -0.520 </z-m>
-      <roll-deg>     0 </roll-deg>
       <pitch-deg>   68 </pitch-deg>
-      <heading-deg>  0 </heading-deg>
     </offsets>
   </model>
 

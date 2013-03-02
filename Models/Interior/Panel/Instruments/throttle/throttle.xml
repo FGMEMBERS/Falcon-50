@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Throttles -->
-
 <PropertyList>
 
   <path>throttle.ac</path>
@@ -26,14 +25,8 @@
     <object-name>manette1D</object-name>
     <property>controls/engines/engine[0]/throttle</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 0.10 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.10 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -48,14 +41,8 @@
     <object-name>manette2D</object-name>
     <property>controls/engines/engine[1]/throttle</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 0.10 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.10 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
@@ -70,14 +57,8 @@
     <object-name>manette3D</object-name>
     <property>controls/engines/engine[2]/throttle</property>
     <interpolation>
-      <entry>
-        <ind> 0.00 </ind>
-        <dep> 0.00 </dep>
-      </entry>
-      <entry>
-        <ind>  1.00 </ind>
-        <dep> 0.10 </dep>
-      </entry>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.10 </dep></entry>
     </interpolation>
     <axis>
       <x> -1 </x>
