@@ -154,7 +154,7 @@
   </model>         
 
   <model>
-    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/adf/rmi.xml</path>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/adf/adf.xml</path>
     <offsets>
       <x-m> -0.221 </x-m>
       <y-m> -0.140 </y-m>

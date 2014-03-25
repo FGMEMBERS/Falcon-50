@@ -264,8 +264,8 @@ var Engine = {
         m.cutoff.setBoolValue(1);
         m.fuel_out = props.globals.getNode("engines/engine["~eng_num~"]/out-of-fuel",1);
         m.fuel_out.setBoolValue(0);
-		m.autostart = props.globals.getNode("controls/engines/autostart",1);
-		m.autostart.setBoolValue(1);
+    m.autostart = props.globals.getNode("controls/engines/autostart",1);
+    m.autostart.setBoolValue(1);
         m.starterSwitch = props.globals.getNode("controls/engines/StartIgnition-knob["~eng_num~"]",1);
         m.starterSystem = props.globals.getNode("systems/electrical/outputs/starter["~eng_num~"]",1);
         m.generator = props.globals.getNode("controls/electric/engine["~eng_num~"]/generator",1);

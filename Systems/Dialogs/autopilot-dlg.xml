@@ -3,20 +3,20 @@
 <!-- Based on 777 -->
 
 <PropertyList>
-
+  
   <name>autopilot-dlg</name>
   <layout>vbox</layout>
   <default-padding>1</default-padding>
   <y>-40</y>
-
+  
   <group>
     <layout>hbox</layout>
-
+    
     <text>
       <halign>left</halign>
       <label> Autopilot Control</label>
     </text>
-
+    
     <button>
       <halign>right</halign>
       <pref-width>20</pref-width>
@@ -27,21 +27,21 @@
         <command>dialog-close</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
   <hrule/>
-
+  
   <group>
     <layout>hbox</layout>
-
+    
     <text>
       <halign>left</halign>
       <label>[ Active ]</label>
     </text>
-
+    
     <vrule/>
-
+    
     <text>
       <border>1</border>
       <label>9999999</label>
@@ -49,9 +49,9 @@
       <property>instrumentation/afds/ap-modes/speed-mode</property>
       <live>1</live>
     </text>
-
+    
     <vrule/>
-
+    
     <text>
       <border>1</border>
       <label>9999999</label>
@@ -59,9 +59,9 @@
       <property>instrumentation/afds/ap-modes/roll-mode</property>
       <live>1</live>
     </text>
-
+    
     <vrule/>
-
+    
     <text>
       <border>1</border>
       <label>9999999</label>
@@ -69,14 +69,14 @@
       <property>instrumentation/afds/ap-modes/pitch-mode</property>
       <live>1</live>
     </text>
-
+    
   </group>
-
+  
   <hrule/>
-
+  
   <group> <!-- Power buttons-->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>40</pref-width>
       <pref-height>35</pref-height>
@@ -88,7 +88,7 @@
       </binding>
       <live>true</live>
     </button>
-
+    
     <button>
       <one-shot>false</one-shot>
       <legend>AP DISENGAGE</legend>
@@ -98,7 +98,7 @@
       </binding>
       <live>true</live>
     </button>
-
+    
     <button>
       <pref-width>40</pref-width>
       <pref-height>35</pref-height>
@@ -110,14 +110,14 @@
       </binding>
       <live>true</live>
     </button>
-
+    
   </group>
-
+  
   <hrule/>
-
+  
   <group> <!-- Modes toggles-->
     <layout>hbox</layout>
-
+    
     <checkbox>
       <label>ias/mach</label>
       <property>instrumentation/afds/inputs/ias-mach-selected</property>
@@ -126,7 +126,7 @@
       </binding>
       <live>true</live>
     </checkbox>
-
+    
     <checkbox>
       <label>hdg/trk</label>
       <property>instrumentation/afds/inputs/hdg-trk-selected</property>
@@ -135,7 +135,7 @@
       </binding>
       <live>true</live>
     </checkbox>
-
+    
     <checkbox>
       <label>vs/fpa</label>
       <property>instrumentation/afds/inputs/vs-fpa-selected</property>
@@ -145,26 +145,26 @@
       <live>true</live>
     </checkbox>
   </group>
-
+  
   <group>
     <layout>hbox</layout>
     <hrule>
       <stretch>true</stretch>
     </hrule>
-
+    
     <text>
       <halign>center</halign>
       <label>Lateral Modes</label>
     </text>
-
+    
     <hrule>
       <stretch>true</stretch>
     </hrule>
   </group>
-
+  
   <group> <!-- Heading Bug Hold -->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>50</pref-width>
       <pref-height>25</pref-height>
@@ -175,7 +175,7 @@
         <script>autosystem.afds.input(0,1);</script>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -193,7 +193,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -211,7 +211,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <input>
       <halign>left</halign>
       <pref-width>50</pref-width>
@@ -221,7 +221,7 @@
         <command>dialog-apply</command>
       </binding>
     </input>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -239,7 +239,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -257,12 +257,12 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
   <group> <!-- Lateral Navigation-->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>55</pref-width>
       <pref-height>25</pref-height>
@@ -273,23 +273,23 @@
         <script>autosystem.afds.input(0,3);</script>
       </binding>
     </button>
-
+    
     <!--
     <checkbox>
-      <label>FMS</label>
-      <property>autopilot/route-manager/active</property>
-      <live>true</live>
-      <binding>
-        <command>dialog-apply</command>
-      </binding>
+    <label>FMS</label>
+    <property>autopilot/route-manager/active</property>
+    <live>true</live>
+    <binding>
+    <command>dialog-apply</command>
+    </binding>
     </checkbox>
     -->
-
+    
   </group>
-
+  
   <group> <!-- Localizer Arm-->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>55</pref-width>
       <pref-height>25</pref-height>
@@ -300,7 +300,7 @@
         <script>autosystem.afds.input(0,4);</script>
       </binding>
     </button>
-
+    
     <checkbox>
       <label>BC</label>
       <property>instrumentation/nav/back-course-btn</property>
@@ -309,12 +309,12 @@
         <command>dialog-apply</command>
       </binding>
     </checkbox>
-
+    
   </group>
-
+  
   <group> <!-- Radials-->
     <layout>hbox</layout>
-
+    
     <input>
       <halign>left</halign>
       <label>nav1 crs</label>
@@ -329,7 +329,7 @@
         <command>dialog-update</command>
       </binding>
     </input>
-
+    
     <input>
       <halign>left</halign>
       <label>nav2 crs</label>
@@ -344,28 +344,28 @@
         <command>dialog-update</command>
       </binding>
     </input>
-
+    
   </group>
-
+  
   <group>
     <layout>hbox</layout>
     <hrule>
       <stretch>true</stretch>
     </hrule>
-
+    
     <text>
       <halign>center</halign>
       <label>Vertical Modes</label>
     </text>
-
+    
     <hrule>
       <stretch>true</stretch>
     </hrule>
   </group>
-
+  
   <group> <!-- ALT -->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>45</pref-width>
       <pref-height>25</pref-height>
@@ -376,7 +376,7 @@
         <script>autosystem.afds.input(1,1);</script>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -394,7 +394,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -412,17 +412,17 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <input>
       <pref-width>70</pref-width>
       <pref-height>25</pref-height>
       <name>altset</name>
       <property>autopilot/settings/counter-set-altitude-ft</property>
       <binding>
-                    <command>dialog-apply</command>
+        <command>dialog-apply</command>
       </binding>
     </input>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -440,7 +440,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -458,12 +458,12 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
   <group> <!-- VS -->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>45</pref-width>
       <pref-height>25</pref-height>
@@ -474,7 +474,7 @@
         <script>autosystem.afds.input(1,2);</script>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -492,7 +492,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -510,7 +510,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <input>
       <pref-width>70</pref-width>
       <pref-height>25</pref-height>
@@ -520,7 +520,7 @@
         <command>dialog-apply</command>
       </binding>
     </input>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>25</pref-width>
@@ -538,7 +538,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <halign>left</halign>
       <pref-width>35</pref-width>
@@ -556,12 +556,12 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
   <group>
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>45</pref-width>
       <pref-height>25</pref-height>
@@ -576,40 +576,40 @@
         <property>instrumentation/afds/inputs/loc-armed</property>
       </binding>
     </button>
-
+    
     <checkbox>
       <label>LOC armed</label>
       <property>instrumentation/afds/inputs/loc-armed</property>
       <live>true</live>
     </checkbox>
-
+    
     <checkbox>
       <label>GS armed</label>
       <property>instrumentation/afds/inputs/gs-armed</property>
       <live>true</live>
     </checkbox>
-
+    
   </group>
-
+  
   <group>
     <layout>hbox</layout>
     <hrule>
       <stretch>true</stretch>
     </hrule>
-
+    
     <text>
       <halign>center</halign>
       <label>Speed Modes</label>
     </text>
-
+    
     <hrule>
       <stretch>true</stretch>
     </hrule>
   </group>
-
+  
   <layout>vbox</layout>
   <padding>4</padding>
-
+  
   <group>
     <layout>hbox</layout>
     <checkbox>
@@ -620,7 +620,7 @@
       </binding>
       <live>true</live>
     </checkbox>
-
+    
     <checkbox>
       <label>RH throttle arm</label>
       <property>instrumentation/afds/inputs/at-armed[1]</property>
@@ -629,12 +629,12 @@
       </binding>
       <live>true</live>
     </checkbox>
-
+    
   </group>
-
+  
   <group> <!-- Auto Throttle-->
     <layout>hbox</layout>
-
+    
     <button>
       <pref-width>40</pref-width>
       <pref-height>25</pref-height>
@@ -644,7 +644,7 @@
         <script>autosystem.afds.input(2,5);</script>
       </binding>
     </button>
-
+    
     <button>
       <pref-width>35</pref-width>
       <pref-height>25</pref-height>
@@ -661,7 +661,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <pref-width>25</pref-width>
       <pref-height>25</pref-height>
@@ -678,7 +678,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <input>
       <pref-width>50</pref-width>
       <property>autopilot/settings/target-speed-kt</property>
@@ -686,7 +686,7 @@
         <command>dialog-apply</command>
       </binding>
     </input>
-
+    
     <button>
       <pref-width>25</pref-width>
       <pref-height>25</pref-height>
@@ -703,7 +703,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <pref-width>35</pref-width>
       <pref-height>25</pref-height>
@@ -720,16 +720,16 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
   <group>
     <layout>hbox</layout>
-
+    
     <text>
       <label>Mach</label>
     </text>
-
+    
     <button>
       <pref-width>35</pref-width>
       <pref-height>25</pref-height>
@@ -746,7 +746,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <pref-width>25</pref-width>
       <pref-height>25</pref-height>
@@ -763,7 +763,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <input>
       <pref-width>55</pref-width>
       <property>autopilot/settings/target-speed-mach</property>
@@ -771,7 +771,7 @@
         <command>dialog-apply</command>
       </binding>
     </input>
-
+    
     <button>
       <pref-width>25</pref-width>
       <pref-height>25</pref-height>
@@ -788,7 +788,7 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
     <button>
       <pref-width>35</pref-width>
       <pref-height>25</pref-height>
@@ -805,8 +805,8 @@
         <command>dialog-update</command>
       </binding>
     </button>
-
+    
   </group>
-
+  
 </PropertyList>
 

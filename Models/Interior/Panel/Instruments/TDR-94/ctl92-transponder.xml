@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- CTL 92 Control for TDR-94 transponder 2.375"W x 2.625"H Syd Adams -->
-
 <PropertyList>
 
   <path>ctl92.ac</path>
@@ -318,4 +317,3 @@
   </animation>
 
 </PropertyList>
-

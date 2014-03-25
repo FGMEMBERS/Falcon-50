@@ -4,6 +4,7 @@
 
   <sim  include="Systems/views.xml">
 
+    <description>Dassault Falcon 50 (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM), OO-ZVY (System)</author>
     <status>development</status>
 
@@ -44,10 +45,9 @@
         <int type="int" n="3">  0 </int>                                           <!--  3 immat -->
         <int type="int" n="4">  0 </int>                                           <!--  4 immat -->
         <int type="int" n="5">  0 </int>                                           <!--  5 immat -->
-        <int type="bool" n="6" alias="/sim/model/hide-winglets"> 1 </int>           <!--  8 Winglets -->
-        <int type="int" n="10" alias="/controls/armament/trigger">0</int>           <!-- 10 reserved for bombable mode -->
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <int type="bool" n="6" alias="/sim/model/hide-winglets"> 1 </int>          <!--  8 Winglets -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/passenger/position-norm"/>
         <float n="2" alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
         <float n="3" alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
         <float n="4" alias="/engines/engine[0]/n1" />
@@ -56,79 +56,20 @@
         <float n="7" alias="/controls/engines/engine[0]/throttle" />
         <float n="8" alias="/controls/engines/engine[1]/throttle" />
         <float n="9" alias="/controls/engines/engine[2]/throttle" />
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="14" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="15" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
         <string n="9" type="string" />
-        <!-- string[9] reserved for bombable mode -->
       </generic>
     </multiplay>
 
-    <help>
-      <title>Falcon 50</title>
-      <key>
-        <name>Delete</name>
-        <desc>toggle thrust reversers</desc>
-      </key>
-      <key>
-        <name>d</name>
-        <desc>Open/Close crew doors</desc>
-      </key>
-      <key>
-        <name>j/k</name>
-        <desc>Spoilers</desc>
-      </key>
-      <key>
-        <name>Delete</name>
-        <desc>Toggle Reversers</desc>
-      </key>
-      <key>
-        <name>F11</name>
-        <desc>Pop up autopilot dialog</desc>
-      </key>
-      <key>
-        <name>F12</name>
-        <desc>Radio Stack</desc>
-      </key>
-      <key>
-        <name>Ctrl-a</name>
-        <desc>toggle autopilot altitude lock</desc>
-      </key>
-      <key>
-        <name>Ctrl-g</name>
-        <desc>toggle autopilot glide slope lock</desc>
-      </key>
-      <key>
-        <name>Ctrl-h</name>
-        <desc>toggle autopilot heading lock</desc>
-      </key>
-      <key>
-        <name>Ctrl-i</name>
-        <desc>toggle auto spoilers</desc>
-      </key>
-      <key>
-        <name>Ctrl-l</name>
-        <desc>toggle cabin lights</desc>
-      </key>
-      <key>
-        <name>Ctrl-n</name>
-        <desc>toggle LNAV lock</desc>
-      </key>
-      <key>
-        <name>Ctrl-o</name>
-        <desc>A/P ~ Passive</desc>
-      </key>
-      <key>
-        <name>Ctrl-p</name>
-        <desc>toggle VS</desc>
-      </key>
-      <key>
-        <name>Ctrl-s</name>
-        <desc>toggle autothrottle</desc>
-      </key>
-      <key>
-        <name>Ctrl-t</name>
-        <desc>TO/GA switch</desc>
-      </key>
-    </help>
-
+    <help include="Systems/help.xml"/>
+    
     <weight n="0">
       <name>Crew</name>
       <weight-lb type="double">400</weight-lb>
@@ -231,19 +172,19 @@
       <on-off type="bool">true</on-off>
     </ecm>
     <radar>
-        <!--5H1N0B1's add-->
-              <range type="int" archive="y">20</range>
-              <range-factor type="double" archive="n">0.001888</range-factor>
-              <minimized type="bool" archive="y">false</minimized>
-              <selected type="int">3</selected>
-              <enabled type="bool">true</enabled>
-              <az-field type="double">120</az-field>
-              <range type="double">150</range>
-              <range-selected type="double">20</range-selected>
-              <radar2-range type="double">150</radar2-range>
-              <display-rdr type="bool">true</display-rdr>
-              <radar-standby type="int">0</radar-standby>
-        <!--end add-->
+      <!--5H1N0B1's add-->
+      <range type="int" archive="y">20</range>
+      <range-factor type="double" archive="n">0.001888</range-factor>
+      <minimized type="bool" archive="y">false</minimized>
+      <selected type="int">3</selected>
+      <enabled type="bool">true</enabled>
+      <az-field type="double">120</az-field>
+      <range type="double">150</range>
+      <range-selected type="double">20</range-selected>
+      <radar2-range type="double">150</radar2-range>
+      <display-rdr type="bool">true</display-rdr>
+      <radar-standby type="int">0</radar-standby>
+      <!--end add-->
     
       <mode-control type="int" archive="y">1</mode-control>
       <display-mode type="string">plan</display-mode>
@@ -269,24 +210,24 @@
         </color>
         <tcas>
           <color n="0"> <!-- distant targets -->
-            <red type="float">0</red>
-            <green type="float">1</green>
-            <blue type="float">1</blue>
+            <red type="float">   0 </red>
+            <green type="float"> 1 </green>
+            <blue type="float">  1 </blue>
           </color>
           <color n="1"> <!-- proximity targets -->
-            <red type="float">0</red>
-            <green type="float">1</green>
-            <blue type="float">1</blue>
+            <red type="float">   0 </red>
+            <green type="float"> 1 </green>
+            <blue type="float">  1 </blue>
           </color>
           <color n="2"> <!-- TA threat targets -->
-            <red type="float">1</red>
-            <green type="float">0.5</green>
-            <blue type="float">0</blue>
+            <red type="float">   1.0 </red>
+            <green type="float"> 0.5 </green>
+            <blue type="float">  0.0 </blue>
           </color>
           <color n="3"> <!-- RA threat targets -->
-            <red type="float">1</red>
-            <green type="float">0</green>
-            <blue type="float">0</blue>
+            <red type="float">   1 </red>
+            <green type="float"> 0 </green>
+            <blue type="float">  0 </blue>
           </color>
         </tcas>
         <name type="string">helvetica_bold.txf</name>
@@ -294,8 +235,8 @@
         <line-spacing type="float">0.01</line-spacing>
       </font>
       <lightning type="bool">true</lightning>
-      <radar-texture-path type="string">Aircraft/777/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <echo-texture-path type="string">Aircraft/777/Models/Instruments/MFD/wxecho.png</echo-texture-path>
+      <radar-texture-path type="string">Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/Images/od_wxradar.png</radar-texture-path>
+      <echo-texture-path type="string">Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/Images/wxecho.png</echo-texture-path>
       <minimized type="bool">false</minimized>
       <heading-marker type="bool">true</heading-marker>
       <limit-deg type="int">360</limit-deg>
@@ -313,8 +254,6 @@
       <hud-vertical-offset-m type="double">-0.025</hud-vertical-offset-m>
     </radar2>
     <!--end add-->
-    
-    
     
     <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
       <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
@@ -464,8 +403,8 @@
       </config>
     </gps>
     <nd>
-      <radar-texture-path type="string">Aircraft/777/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-      <symbol-texture-path type="string">Aircraft/777/Models/Instruments/MFD/boeing-nd.png</symbol-texture-path>
+      <radar-texture-path type="string">Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/Images/od_wxradar.png</radar-texture-path>
+      <symbol-texture-path type="string">Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/Images/boeing-nd.png</symbol-texture-path>
       <font>
         <color>
           <red type="float">   0.7 </red>
@@ -534,7 +473,7 @@
       <file>Aircraft/Falcon-50/Systems/dialogs.nas</file>
     </dialogs>
     <cdu>
-      <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
+      <file>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/cdu/cdu.nas</file>
     </cdu>
     <doors>
       <file>Aircraft/Falcon-50/Nasal/doors.nas</file>
@@ -555,9 +494,6 @@
     <rwr>
       <file>Aircraft/Falcon-50/Nasal/rwr.nas</file>
     </rwr>
-    <cdu>
-      <file>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/cdu/cdu.nas</file>
-    </cdu>
   </nasal>
 
 </PropertyList>

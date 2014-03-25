@@ -6,7 +6,13 @@
     <menu n="10">
       <label>Falcon 50</label>
       <enabled type="bool">true</enabled>
-
+      <item>
+        <label>Start Engine</label>
+        <binding>
+          <command>nasal</command>
+          <script>autosystem.Startup()</script>
+        </binding>
+      </item>
       <item>
         <label>Select Livery</label>
         <binding>
@@ -14,20 +20,11 @@
           <script>aircraft.livery.dialog.toggle()</script>
         </binding>
       </item>
-
       <item>
         <label>Show/hide winglets</label>
         <binding>
           <command>property-toggle</command>
           <property>sim/multiplay/generic/int[6]</property>
-        </binding>
-      </item>
-      
-      <item>
-        <label>Start Engine</label>
-        <binding>
-          <command>nasal</command>
-          <script>autosystem.Startup()</script>
         </binding>
       </item>
 <!--

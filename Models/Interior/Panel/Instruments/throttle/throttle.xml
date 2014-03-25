@@ -16,7 +16,6 @@
     <object-name>manette3D</object-name>
     <!-- Objets transparents -->
   </animation>
-
  
   <!-- Throttle -->
   <animation>
@@ -68,4 +67,3 @@
   </animation>
 
 </PropertyList>
-

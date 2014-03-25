@@ -8,30 +8,30 @@ var vspeeds = func {
 
        # Create/populate variables at each function cycle
        # Retrieve total aircraft weight and convert to kg.
-	WT = getprop("/yasim/gross-weight-lbs")*0.00045359237;
-	flaps = getprop("/controls/flight/flaps");
+  WT = getprop("/yasim/gross-weight-lbs")*0.00045359237;
+  flaps = getprop("/controls/flight/flaps");
 
        # Calculate V-speeds with flaps 10
-	if (flaps == 0.314) {
-		V1 = (0.3*(WT-200))+100;
-		VR = (0.3*(WT-200))+115;
-		V2 = (0.3*(WT-200))+135;
-	}
+  if (flaps == 0.314) {
+    V1 = (0.3*(WT-200))+100;
+    VR = (0.3*(WT-200))+115;
+    V2 = (0.3*(WT-200))+135;
+  }
 
        # Calculate V-speeds with flaps 20
-	elsif (flaps == 1) {
-		V1 = (0.3*(WT-200))+95;
-		VR = (0.3*(WT-200))+110;
-		V2 = (0.3*(WT-200))+130;
-	}
+  elsif (flaps == 1) {
+    V1 = (0.3*(WT-200))+95;
+    VR = (0.3*(WT-200))+110;
+    V2 = (0.3*(WT-200))+130;
+  }
 
        # Export the calculated V-speeds to the property-tree, for further use
-	setprop("/instrumentation/fmc/vspeeds/V1",V1);
-	setprop("/instrumentation/fmc/vspeeds/VR",VR);
-	setprop("/instrumentation/fmc/vspeeds/V2",V2);
+  setprop("/instrumentation/fmc/vspeeds/V1",V1);
+  setprop("/instrumentation/fmc/vspeeds/VR",VR);
+  setprop("/instrumentation/fmc/vspeeds/V2",V2);
 
        # Repeat the function each second
-	settimer(vspeeds, 1);
+  settimer(vspeeds, 1);
 }
 
 # Only start the function when the FDM is initialized, to prevent the problem of not-yet-created properties.
