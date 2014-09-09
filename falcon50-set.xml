@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="falcon50-base.xml">
+
+  <sim>
+
+    <description>Dassault Falcon 50 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), OO-ZVY (System)</author>
+    <status>development</status>
+    <flight-model>yasim</flight-model>
+    <aero>falcon50-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 3 </systems>
+      <cockpit type="int"> 3 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>

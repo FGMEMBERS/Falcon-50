@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Syd Adams - 777-200 Navigation display -->
+
+<PropertyList>
+
+  <path>EFIS.ac</path>
+
+  <animation>
+    <object-name>EFIS.bezel</object-name>
+    <object-name>EFIS.screen</object-name>
+    
+    <object-name>EFIS.vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>EFIS.vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>EFIS.vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>EFIS.screen</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.80 </red>
+      <green> 0.80 </green>
+      <blue>  0.80 </blue>
+    </emission>
+  </animation>
+
+  <panel>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/mfd-panel.xml</path>
+    <bottom-left>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.090 </y-m>
+      <z-m> -0.087 </z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>  0.003 </x-m>
+      <y-m>  0.090 </y-m>
+      <z-m> -0.087 </z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.090 </y-m>
+      <z-m>  0.094 </z-m>
+    </top-left>
+  </panel>
+
+  <panel>
+    <path>Aircraft/Falcon-50/Models/Interior/Panel/Instruments/EFIS/MFD/mfdtext-panel.xml</path>
+    <bottom-left>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.090 </y-m>
+      <z-m> -0.087 </z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>  0.005</x-m>
+      <y-m>  0.090</y-m>
+      <z-m> -0.087</z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>  0.005 </x-m>
+      <y-m> -0.090 </y-m>
+      <z-m>  0.094 </z-m>
+    </top-left>
+  </panel>
+
+</PropertyList>

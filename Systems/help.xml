@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Falcon 50</title>
+  <key>
+    <name>Delete</name>
+    <desc>toggle thrust reversers</desc>
+  </key>
+  <key>
+    <name>d</name>
+    <desc>Open/Close crew doors</desc>
+  </key>
+  <key>
+    <name>j/k</name>
+    <desc>Spoilers</desc>
+  </key>
+  <key>
+    <name>Delete</name>
+    <desc>Toggle Reversers</desc>
+  </key>
+  <key>
+    <name>F11</name>
+    <desc>Pop up autopilot dialog</desc>
+  </key>
+  <key>
+    <name>F12</name>
+    <desc>Radio Stack</desc>
+  </key>
+  <key>
+    <name>Ctrl-a</name>
+    <desc>toggle autopilot altitude lock</desc>
+  </key>
+  <key>
+    <name>Ctrl-g</name>
+    <desc>toggle autopilot glide slope lock</desc>
+  </key>
+  <key>
+    <name>Ctrl-h</name>
+    <desc>toggle autopilot heading lock</desc>
+  </key>
+  <key>
+    <name>Ctrl-i</name>
+    <desc>toggle auto spoilers</desc>
+  </key>
+  <key>
+    <name>Ctrl-l</name>
+    <desc>toggle cabin lights</desc>
+  </key>
+  <key>
+    <name>Ctrl-n</name>
+    <desc>toggle LNAV lock</desc>
+  </key>
+  <key>
+    <name>Ctrl-o</name>
+    <desc>A/P ~ Passive</desc>
+  </key>
+  <key>
+    <name>Ctrl-p</name>
+    <desc>toggle VS</desc>
+  </key>
+  <key>
+    <name>Ctrl-s</name>
+    <desc>toggle autothrottle</desc>
+  </key>
+  <key>
+    <name>Ctrl-t</name>
+    <desc>TO/GA switch</desc>
+  </key>
+  
+</PropertyList>
